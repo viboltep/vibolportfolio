@@ -1,21 +1,22 @@
 <template>
   <div>
     <div class="min-h-screen flex items-center justify-center pt-12 md:pt-0">
-      <div style="max-width: 1800px" class="grid grid-cols-12">
+      <div style="max-width: 1800px" class="grid ">
         <!-- Logo and text -->
         <div class="col-span-12 sm:col-span-12 md:col-span-8 lg:col-span-7 pb-12 md:pb-0 grid grid-cols-12">
           <div class="col-span-12 md:col-span-4 flex items-center justify-center md:justify-end mt-0 lg:mt-2">
             <img
                 id="logo"
-                src="~/assets/img/logo-512.png" alt="LocalSend Logo"
-                class="h-52 md:h-40 lg:h-40 xl:h-48 2xl:h-56 object-contain"
+                src="~/assets/img/profile.jpeg" alt="My Profile"
+                class="h-52 md:h-40 lg:h-40 xl:h-48 2xl:h-56 object-contain rounded-3xl"
             />
           </div>
+          
 
           <div class="col-span-12 md:col-span-8 flex items-center justify-center md:justify-start lg:pl-2">
             <div>
               <h1 class="text-5xl sm:text-5xl xl:text-7xl 2xl:text-8xl font-black text-center md:text-start">
-                LocalSend
+                {{ t('home.profilename') }}
               </h1>
               <h2 class="slogan text-xl md:text-xl xl:text-2xl 2xl:text-3xl font-light text-center md:text-start mt-2 px-4 md:px-0">
                 {{ t('home.slogan1') }}
@@ -27,12 +28,12 @@
               <div class="buttons mt-4 xl:mt-6 px-4 md:px-0 flex flex-wrap justify-center md:justify-start gap-4">
                 <NuxtLink :to="localePath({ path: '/download' })">
                   <AppButton icon="material-symbols:arrow-downward">
-                    {{ t('home.download') }}
+                    {{ t('home.mycv') }}
                   </AppButton>
                 </NuxtLink>
                 <NuxtLink :to="localePath({ path: '/community' })">
                   <AppButton icon="material-symbols:group" :dark="true">
-                    {{ t('home.community') }}
+                    {{ t('home.hiringme') }}
                   </AppButton>
                 </NuxtLink>
               </div>
@@ -41,7 +42,7 @@
         </div>
 
         <!-- Screenshots -->
-        <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-5 grid grid-cols-3 gap-8 px-8">
+        <!-- <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-5 grid grid-cols-3 gap-8 px-8">
           <div class="col-span-3 md:col-span-1 flex items-center justify-center">
             <img src="/img/screenshot-iphone.webp" alt="iPhone Screenshot"
                  class="h-96 object-contain"/>
@@ -50,10 +51,13 @@
             <img src="/img/screenshot-pc.webp" alt="PC Screenshot"
                  class="h-96 object-contain"/>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
-
+    <div class="items-center">
+      <ProfileInfo />
+    </div>
+    
     <!-- End of hero section -->
 
     <div class="m-auto max-w-screen-lg flex flex-col items-center mt-4 px-4 lg:px-12">
@@ -127,12 +131,13 @@
           </AppButton>
         </NuxtLink>
       </div>
-
+      
       <TextButton href="https://github.com/localsend/website" target="_blank" icon="material-symbols:build"
                   class="mb-8">
         {{ t('improveWebsite') }}
       </TextButton>
     </div>
+    
   </div>
 </template>
 
@@ -163,7 +168,7 @@ onMounted(() => {
 
 <style scoped>
 #logo {
-  animation: rotating 40s linear infinite;
+  /* animation: rotating 40s linear infinite; */
 }
 
 .slogan {

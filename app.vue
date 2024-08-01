@@ -1,8 +1,9 @@
 <template>
   <NuxtLayout>
     <NuxtPage />
-    <AppFooter />
     <LanguageSwitcher />
+    <ThemeSwitcher />
+    <AppFooter />
   </NuxtLayout>
 </template>
 

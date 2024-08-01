@@ -4,10 +4,16 @@
       "title": "LocalSend: Share files to nearby devices",
       "description": "LocalSend is a free, open-source, cross-platform file sharing tool that allows you to share files to nearby devices."
     },
-    "slogan1": "Share files to nearby devices.",
-    "slogan2": "Free, open-source, cross-platform.",
-    "download": "Download",
-    "community": "Community",
+    "slogan1": "Mobile Developers",
+    "slogan2": "#Flutter #UX/UI",
+    "mycv": "Download My CV",
+    "hiringme": "Hiring Me",
+    "profilename": "Vibol TEP",
+    "theme":{
+      "system":"System",
+      "light":"Light",
+      "dark":"Dark"
+    },
     "features": {
       "title": "Features",
       "decentralized": "Decentralized",
